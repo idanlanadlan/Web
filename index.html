@@ -1,9 +1,9 @@
-0<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>עידן לנדל"ן – משרד בוטיקי לנכסי נדל"ן בתל אביב</title>
+    <title>עידן לנדל"ן – דף נחיתה</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <!-- Font Awesome for icons -->
@@ -15,7 +15,6 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /* Reset and base styles */
       * {
         margin: 0;
         padding: 0;
@@ -31,7 +30,6 @@
         text-decoration: none;
         color: inherit;
       }
-      /* Color palette */
       :root {
         --primary: #1c3a6e;
         --accent: #00b894;
@@ -39,7 +37,6 @@
         --text-dark: #1a1a1a;
         --text-light: #f5f5f5;
       }
-      /* Header */
       header {
         background-color: var(--primary);
         color: var(--text-light);
@@ -65,15 +62,9 @@
       header nav li a:hover {
         color: var(--accent);
       }
-      /* Hero section */
       .hero {
         position: relative;
-        background-image: linear-gradient(
-            to bottom,
-            rgba(28, 58, 110, 0.8),
-            rgba(28, 58, 110, 0.8)
-          ),
-          url('https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-image: linear-gradient(to bottom, rgba(28, 58, 110, 0.8), rgba(28, 58, 110, 0.8)), url('images/0922a872-c64c-4cc6-9620-c6b2b3a77eed__202525.jpg');
         background-size: cover;
         background-position: center;
         color: var(--text-light);
@@ -106,7 +97,6 @@
       .hero .cta-buttons a:hover {
         background-color: #01986f;
       }
-      /* Section wrapper */
       .section {
         padding: 4rem 2rem;
       }
@@ -116,7 +106,6 @@
         color: var(--primary);
         text-align: center;
       }
-      /* Services */
       .services {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -147,7 +136,6 @@
         font-size: 0.95rem;
         color: var(--text-dark);
       }
-      /* About section */
       .about {
         display: flex;
         flex-direction: column;
@@ -160,7 +148,6 @@
         margin: 0 auto;
         line-height: 1.8;
       }
-      /* CTA box */
       .cta-box {
         background-color: var(--primary);
         color: var(--text-light);
@@ -168,13 +155,6 @@
         text-align: center;
         border-radius: 8px;
         margin: 2rem 0;
-      }
-      .cta-box .cta-actions {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1rem;
       }
       .cta-box h2 {
         color: var(--text-light);
@@ -184,18 +164,35 @@
       .cta-box p {
         margin-bottom: 2rem;
       }
+      .cta-box .cta-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
       .cta-box a {
         background-color: var(--accent);
         color: var(--text-light);
         padding: 0.75rem 1.5rem;
         border-radius: 30px;
-        margin: 0 0.5rem;
         display: inline-block;
+        margin: 0 0.5rem;
       }
       .cta-box a:hover {
         background-color: #01986f;
       }
-      /* Footer */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .gallery img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
       footer {
         background-color: var(--primary);
         color: var(--text-light);
@@ -206,7 +203,6 @@
       footer a {
         color: var(--accent);
       }
-      /* Responsive adjustments */
       @media (min-width: 768px) {
         .hero h1 {
           font-size: 3rem;
@@ -218,27 +214,25 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="logo">עידן לנדל"ן</div>
       <nav>
         <ul>
           <li><a href="#services">שירותים</a></li>
+          <li><a href="#gallery">גלריה</a></li>
           <li><a href="#about">אודות</a></li>
           <li><a href="#contact">צור קשר</a></li>
         </ul>
       </nav>
     </header>
-    <!-- Hero Section -->
     <section class="hero">
-      <h1>המשרד הבוטיקי לנדל"ן פרימיום בתל אביב</h1>
+      <h1>משרד בוטיק לנדל"ן פרימיום בתל אביב</h1>
       <p>מכירה, קנייה, השכרה וליווי משקיעים בנדל"ן – שירות אישי ומקצועי שמוביל להצלחה שלך.</p>
       <div class="cta-buttons">
         <a href="https://wa.me/972549791171" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> שלחו ווטסאפ</a>
-        <a href="tel:+972549791171"><i class="fas fa-phone"></i> התקשרו עכשיו</a>
+        <a href="tel:+972549791171"><i class="fas fa-phone"></i> <span dir="ltr">054‑979‑1171</span></a>
       </div>
     </section>
-    <!-- Services Section -->
     <section class="section" id="services">
       <h2>השירותים שלנו</h2>
       <div class="services">
@@ -264,7 +258,14 @@
         </div>
       </div>
     </section>
-    <!-- About Section -->
+    <section class="section" id="gallery">
+      <h2>גלריית תמונות</h2>
+      <div class="gallery">
+        <!-- Images from original page -->
+        <!-- BEGIN IMAGE LIST -->
+        <!-- We'll programmatically insert images later using placeholders -->
+      </div>
+    </section>
     <section class="section about" id="about">
       <h2>נעים מאוד, אני עידן חולי</h2>
       <p>
@@ -279,21 +280,51 @@
         וכשאני לא בשטח? אני בעלה של ויקטוריה ואבא של אליה, אלאור ואלדר – וזה מזכיר לי למה חשוב לי לעשות את עבודתי מכל הלב.
       </p>
     </section>
-    <!-- CTA Box Section -->
     <section class="section">
       <div class="cta-box" id="contact">
         <h2>שיחת ייעוץ ללא התחייבות</h2>
         <p>השאירו פרטים או פנו אלינו ישירות ונחזור אליכם עם פתרון מותאם אישית לצרכים שלכם.</p>
         <div class="cta-actions">
           <a href="https://wa.me/972549791171" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> פתיחת ווטסאפ</a>
-          <!-- Wrap phone number in left-to-right span so it displays correctly in RTL layout -->
           <a href="tel:+972549791171"><i class="fas fa-phone"></i> <span dir="ltr">054‑979‑1171</span></a>
         </div>
       </div>
     </section>
-    <!-- Footer -->
     <footer>
       <p>© 2025 עידן לנדל"ן – כל הזכויות שמורות.</p>
     </footer>
+    <script>
+      // Dynamically insert image elements into the gallery
+      (function() {
+        const images = [
+          'images/0922a872-c64c-4cc6-9620-c6b2b3a77eed__202525.jpg',
+          'images/2359545_f544ced8-8767-4822-bde7-8386d7bb3b95.png',
+          'images/2370248_84deac51-b54c-4dbb-ae64-3d9f026aa664.png',
+          'images/2385041_913202ff-e6d8-4a55-8b02-c2bc2edefdd5.png',
+          'images/2474296_53066b31-3277-4ec0-bf7f-42a083e10e3f.png',
+          'images/2497219_a9d4586e-64ae-4593-8726-9ec6df541749.png',
+          'images/2501404_c1c71a7f-7d7c-45d4-8a10-7dbcb4f13c39.png',
+          'images/2502316_24d5b7e7-de2c-4151-bf17-1b785ea39d01.png',
+          'images/2504349_766b514c-c7a3-4484-94d2-d4c3247b5f55.png',
+          'images/2507203_41a06311-c6d9-4206-809e-fba60f7a5ae2.png',
+          'images/2507205_a0cff982-cd5a-420f-a660-2323be5b9d67.png',
+          'images/2516982_a6301ff8-3e74-44c6-bfec-18f7d325ee36.png',
+          'images/2526256_2936293c-a496-4677-8fcc-d768aa153447.png',
+          'images/3eb735c1-b0d4-456d-9edf-84244755beea__202042(1).jpg',
+          'images/3eb735c1-b0d4-456d-9edf-84244755beea__202042.jpg',
+          'images/6df3e555-b2ef-41d2-bb0c-35365775ee41__211262.jpg',
+          'images/77f6e22d-7364-40ec-854b-8c15e5586afe__211863.png',
+          'images/98a35c37-1ecf-4a27-8d8f-0eb4facd11be__201706.jpg',
+          'images/98cf2645-ae46-41bd-9cb8-bfc8688b78f1__130487.png'
+        ];
+        const gallery = document.querySelector('.gallery');
+        images.forEach(src => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = 'תמונה של נכס';
+          gallery.appendChild(img);
+        });
+      })();
+    </script>
   </body>
 </html>
