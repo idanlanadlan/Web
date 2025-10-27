@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>עידן לנדל"ן – משרד בוטיקי לנכסי נדל"ן בתל אביב</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-d0HTBkaUC+FoXbqQksYw1yuUHH0GnyGfD8VHnTErHR8Gw1AdXugxpDyDllrULrUV9o69/59w6MC0FfNbw3/wWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Heebo', sans-serif;
+      }
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      /* Color palette */
+      :root {
+        --primary: #1c3a6e;
+        --accent: #00b894;
+        --bg-light: #ffffff;
+        --text-dark: #1a1a1a;
+        --text-light: #f5f5f5;
+      }
+      /* Header */
+      header {
+        background-color: var(--primary);
+        color: var(--text-light);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+      header nav li a {
+        color: var(--text-light);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      header nav li a:hover {
+        color: var(--accent);
+      }
+      /* Hero section */
+      .hero {
+        position: relative;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(28, 58, 110, 0.8),
+            rgba(28, 58, 110, 0.8)
+          ),
+          url('https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-size: cover;
+        background-position: center;
+        color: var(--text-light);
+        text-align: center;
+        padding: 6rem 2rem;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .hero .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .hero .cta-buttons a {
+        background-color: var(--accent);
+        color: var(--text-light);
+        padding: 0.75rem 1.5rem;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+      .hero .cta-buttons a:hover {
+        background-color: #01986f;
+      }
+      /* Section wrapper */
+      .section {
+        padding: 4rem 2rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        text-align: center;
+      }
+      /* Services */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+      }
+      .service {
+        background-color: var(--bg-light);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .service:hover {
+        transform: translateY(-5px);
+      }
+      .service i {
+        font-size: 2rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+      .service h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        color: var(--primary);
+      }
+      .service p {
+        font-size: 0.95rem;
+        color: var(--text-dark);
+      }
+      /* About section */
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .about p {
+        font-size: 1rem;
+        color: var(--text-dark);
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+      /* CTA box */
+      .cta-box {
+        background-color: var(--primary);
+        color: var(--text-light);
+        padding: 3rem 2rem;
+        text-align: center;
+        border-radius: 8px;
+        margin: 2rem 0;
+      }
+      .cta-box .cta-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .cta-box h2 {
+        color: var(--text-light);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .cta-box p {
+        margin-bottom: 2rem;
+      }
+      .cta-box a {
+        background-color: var(--accent);
+        color: var(--text-light);
+        padding: 0.75rem 1.5rem;
+        border-radius: 30px;
+        margin: 0 0.5rem;
+        display: inline-block;
+      }
+      .cta-box a:hover {
+        background-color: #01986f;
+      }
+      /* Footer */
+      footer {
+        background-color: var(--primary);
+        color: var(--text-light);
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: var(--accent);
+      }
+      /* Responsive adjustments */
+      @media (min-width: 768px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+        .hero p {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">עידן לנדל"ן</div>
+      <nav>
+        <ul>
+          <li><a href="#services">שירותים</a></li>
+          <li><a href="#about">אודות</a></li>
+          <li><a href="#contact">צור קשר</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>המשרד הבוטיקי לנדל"ן פרימיום בתל אביב</h1>
+      <p>מכירה, קנייה, השכרה וליווי משקיעים בנדל"ן – שירות אישי ומקצועי שמוביל להצלחה שלך.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/972549791171" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> שלחו ווטסאפ</a>
+        <a href="tel:+972549791171"><i class="fas fa-phone"></i> התקשרו עכשיו</a>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <h2>השירותים שלנו</h2>
+      <div class="services">
+        <div class="service">
+          <i class="fas fa-home"></i>
+          <h3>מכירה וקנייה של נכסים</h3>
+          <p>איתור דירה או נכס המתאים בדיוק לצרכים שלכם והובלת משא ומתן עד לקבלת המפתח, או מכירת הנכס שלך בצורה היעילה ביותר.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-building"></i>
+          <h3>שיווק פרויקטים</h3>
+          <p>לידים איכותיים ופרסום ממוקד ליזמים: חשיפה מקסימלית וניהול משפכי מכירות חכמים שמניבים תוצאות.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-chart-line"></i>
+          <h3>ליווי משקיעים</h3>
+          <p>איתור הזדמנויות להשקעה בתשואה גבוהה, בדיקת כדאיות כלכלית וליווי צמוד לאורך הדרך – בטוח, מדויק ומשתלם.</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-key"></i>
+          <h3>ניהול השכרות</h3>
+          <p>בחירת דיירים איכותיים, מקסום שכר דירה תוך שמירה על האינטרסים שלך ויצירת הכנסה יציבה ללא התעסקות.</p>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <h2>נעים מאוד, אני עידן חולי</h2>
+      <p>
+        אחרי כ‑20 שנה בליווי לקוחות בתהליכי קבלת החלטות פיננסיות וביצוע השקעות נדל"ן פרטיות, הפכתי את התשוקה שלי למקצוע:
+        למצוא לכם בית נכון או השקעה נכונה – עסקה שמשנה חיים ולא עוד דירה.
+      </p>
+      <p>
+        אני מאמין בשקיפות מלאה, חשיבה יצירתית במצבים מורכבים ונחישות לסגור עסקאות במקום שאחרים מרימים ידיים. כל עסקה עבורי היא צעד
+        משמעותי בחיים של הלקוח, ולכן אני מתייחס אליה כאילו היא שלי.
+      </p>
+      <p>
+        וכשאני לא בשטח? אני בעלה של ויקטוריה ואבא של אליה, אלאור ואלדר – וזה מזכיר לי למה חשוב לי לעשות את עבודתי מכל הלב.
+      </p>
+    </section>
+    <!-- CTA Box Section -->
+    <section class="section">
+      <div class="cta-box" id="contact">
+        <h2>שיחת ייעוץ ללא התחייבות</h2>
+        <p>השאירו פרטים או פנו אלינו ישירות ונחזור אליכם עם פתרון מותאם אישית לצרכים שלכם.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/972549791171" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> פתיחת ווטסאפ</a>
+          <!-- Wrap phone number in left-to-right span so it displays correctly in RTL layout -->
+          <a href="tel:+972549791171"><i class="fas fa-phone"></i> <span dir="ltr">054‑979‑1171</span></a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 עידן לנדל"ן – כל הזכויות שמורות.</p>
+      <p>
+        נוצר עם ♥ על ידי צוות השיווק –<a href="https://broadcust.co.il" target="_blank" rel="noopener"> Broadcust</a>
+      </p>
+    </footer>
+  </body>
+</html>
