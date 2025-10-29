@@ -1,222 +1,174 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>עידן לנדל"ן – דף נחיתה</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-d0HTBkaUC+FoXbqQksYw1yuUHH0GnyGfD8VHnTErHR8Gw1AdXugxpDyDllrULrUV9o69/59w6MC0FfNbw3/wWg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Heebo', sans-serif;
-      }
-      body {
-        background-color: #f9f9f9;
-        color: #333;
-        line-height: 1.6;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      :root {
-        --primary: #1c3a6e;
-        --accent: #00b894;
-        --bg-light: #ffffff;
-        --text-dark: #1a1a1a;
-        --text-light: #f5f5f5;
-      }
-      header {
-        background-color: var(--primary);
-        color: var(--text-light);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      header .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
-      }
-      header nav li a {
-        color: var(--text-light);
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-      header nav li a:hover {
-        color: var(--accent);
-      }
-      .hero {
-        position: relative;
-        background-image: linear-gradient(to bottom, rgba(28, 58, 110, 0.8), rgba(28, 58, 110, 0.8)), url('images/0922a872-c64c-4cc6-9620-c6b2b3a77eed__202525.jpg');
-        background-size: cover;
-        background-position: center;
-        color: var(--text-light);
-        text-align: center;
-        padding: 6rem 2rem;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
-      .hero .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .hero .cta-buttons a {
-        background-color: var(--accent);
-        color: var(--text-light);
-        padding: 0.75rem 1.5rem;
-        border-radius: 30px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-      .hero .cta-buttons a:hover {
-        background-color: #01986f;
-      }
-      .section {
-        padding: 4rem 2rem;
-      }
-      .section h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        color: var(--primary);
-        text-align: center;
-      }
-      .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 2rem;
-      }
-      .service {
-        background-color: var(--bg-light);
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        text-align: center;
-        transition: transform 0.3s ease;
-      }
-      .service:hover {
-        transform: translateY(-5px);
-      }
-      .service i {
-        font-size: 2rem;
-        color: var(--accent);
-        margin-bottom: 1rem;
-      }
-      .service h3 {
-        font-size: 1.4rem;
-        margin-bottom: 0.75rem;
-        color: var(--primary);
-      }
-      .service p {
-        font-size: 0.95rem;
-        color: var(--text-dark);
-      }
-      .about {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
-      .about p {
-        font-size: 1rem;
-        color: var(--text-dark);
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.8;
-      }
-      .cta-box {
-        background-color: var(--primary);
-        color: var(--text-light);
-        padding: 3rem 2rem;
-        text-align: center;
-        border-radius: 8px;
-        margin: 2rem 0;
-      }
-      .cta-box h2 {
-        color: var(--text-light);
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      .cta-box p {
-        margin-bottom: 2rem;
-      }
-      .cta-box .cta-actions {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-      }
-      .cta-box a {
-        background-color: var(--accent);
-        color: var(--text-light);
-        padding: 0.75rem 1.5rem;
-        border-radius: 30px;
-        display: inline-block;
-        margin: 0 0.5rem;
-      }
-      .cta-box a:hover {
-        background-color: #01986f;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1rem;
-      }
-      .gallery img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-      footer {
-        background-color: var(--primary);
-        color: var(--text-light);
-        padding: 2rem;
-        text-align: center;
-        font-size: 0.9rem;
-      }
-      footer a {
-        color: var(--accent);
-      }
-      @media (min-width: 768px) {
-        .hero h1 {
-          font-size: 3rem;
-        }
-        .hero p {
-          font-size: 1.3rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="theme-color" content="#1c3a6e" />
+  <title>עידן לנדל"ן – דף נחיתה</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-d0HTBkaUC+FoXbqQksYw1yuUHH0GnyGfD8VHnTErHR8Gw1AdXugxpDyDllrULrUV9o69/59w6MC0FfNbw3/wWg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    /* ---------- Base ---------- */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Heebo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    :root {
+      --primary: #1c3a6e;   /* dark navy (passes contrast on white) */
+      --accent:  #00b894;   /* teal */
+      --accent-press: #01986f;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-inv: #ffffff;
+      --focus: #ffbf47;     /* amber focus outline for visibility */
+      --radius: 12px;
+      --shadow: 0 4px 6px rgba(0,0,0,.06);
+    }
+
+    /* ---------- Skip link (keyboard users) ---------- */
+    .skip-link {
+      position: absolute;
+      inset-inline-start: 0.5rem;
+      top: 0.5rem;
+      background: #000;
+      color: #fff;
+      padding: .5rem .75rem;
+      z-index: 1000;
+      transform: translateY(-200%);
+    }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid var(--focus); }
+
+    /* ---------- Focus visibility ---------- */
+    :where(a, button):focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    /* ---------- Header / Nav ---------- */
+    header[role="banner"] {
+      background-color: var(--primary);
+      color: var(--text-inv);
+    }
+    .topbar {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .logo { font-weight: 700; font-size: 1.5rem; }
+    nav[aria-label="ניווט ראשי"] ul {
+      display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0;
+    }
+    nav a { color: var(--text-inv); font-weight: 500; }
+    nav a:hover, nav a:focus-visible { color: var(--accent); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      color: var(--text-inv);
+      text-align: center;
+      padding: clamp(3.5rem, 6vw, 6rem) 1.25rem;
+      background:
+        linear-gradient(to bottom, rgba(28,58,110,.86), rgba(28,58,110,.86)),
+        url('images/0922a872-c64c-4cc6-9620-c6b2b3a77eed__202525.jpg') center/cover no-repeat;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); margin: 0 0 .75rem; }
+    .hero p  { font-size: clamp(1rem, 2.2vw, 1.25rem); margin: 0 0 1.25rem; }
+    .cta-buttons {
+      display: inline-flex; gap: .75rem; flex-wrap: wrap; justify-content: center;
+    }
+    .btn {
+      background-color: var(--accent); color: var(--text-inv);
+      padding: .8rem 1.25rem; border-radius: 999px; font-weight: 600;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover, .btn:active { background: var(--accent-press); }
+
+    /* ---------- Sections ---------- */
+    main { display: block; }
+    .section {
+      padding: clamp(2rem, 5vw, 4rem) 1.25rem;
+    }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .section h2 {
+      font-size: clamp(1.4rem, 3.2vw, 2rem);
+      margin: 0 0 1.25rem; color: var(--primary); text-align: center;
+    }
+
+    /* ---------- Services ---------- */
+    .services {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    }
+    .service {
+      background: var(--bg); padding: 1.25rem; border-radius: var(--radius);
+      box-shadow: var(--shadow); text-align: center;
+    }
+    .service i { font-size: 1.75rem; color: var(--accent); margin-bottom: .5rem; }
+    .service h3 { margin: .5rem 0 .25rem; color: var(--primary); font-size: 1.15rem; }
+    .service p  { margin: .25rem 0 0; }
+
+    /* ---------- CTA Box ---------- */
+    .cta-box {
+      background: var(--primary); color: var(--text-inv);
+      padding: clamp(2rem, 4.5vw, 3rem); border-radius: var(--radius);
+      text-align: center; box-shadow: var(--shadow);
+    }
+    .cta-actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: .75rem; }
+
+    /* ---------- Gallery ---------- */
+    .gallery {
+      display: grid; gap: .75rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    }
+    .gallery figure { margin: 0; }
+    .gallery img {
+      width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius);
+      background: #e9eef4;
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: var(--primary); color: var(--text-inv);
+      padding: 2rem 1.25rem; text-align: center; font-size: .95rem;
+    }
+
+    /* Reduced motion: keep it calm */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">דלגו לתוכן הראשי</a>
+
+  <header role="banner">
+    <div class="topbar container">
       <div class="logo">עידן לנדל"ן</div>
-      <nav>
+      <nav aria-label="ניווט ראשי">
         <ul>
           <li><a href="#services">שירותים</a></li>
           <li><a href="#gallery">גלריה</a></li>
@@ -224,102 +176,137 @@
           <li><a href="#contact">צור קשר</a></li>
         </ul>
       </nav>
-    </header>
-    <section class="hero">
-      <h1>משרד בוטיק לנדל"ן פרימיום בתל אביב</h1>
-      <p>מכירה, קנייה, השכרה וליווי משקיעים בנדל"ן – שירות אישי ומקצועי שמוביל להצלחה שלך.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/972549791171" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> שלחו ווטסאפ</a>
-        <a href="tel:+972549791171"><i class="fas fa-phone"></i> <span dir="ltr">054‑979‑1171</span></a>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">משרד בוטיק לנדל"ן פרימיום בתל אביב</h1>
+      <p>מכירה, קנייה, השכרה וליווי משקיעים – שירות אישי ומקצועי שמוביל להצלחה שלך.</p>
+      <div class="cta-buttons" role="group" aria-label="פעולות מהירות">
+        <a class="btn"
+           href="https://wa.me/972549791171"
+           target="_blank" rel="noopener"
+           aria-label="שליחת הודעת ווטסאפ לעידן לנדל״ן">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> שלחו ווטסאפ
+        </a>
+        <a class="btn"
+           href="tel:+972549791171"
+           aria-label="התקשרו לעידן לנדל״ן במספר 054-979-1171">
+          <i class="fas fa-phone" aria-hidden="true"></i> <span dir="ltr">054-979-1171</span>
+        </a>
       </div>
     </section>
-    <section class="section" id="services">
-      <h2>השירותים שלנו</h2>
+
+    <section class="section container" id="services" aria-labelledby="services-title">
+      <h2 id="services-title">השירותים שלנו</h2>
       <div class="services">
-        <div class="service">
-          <i class="fas fa-home"></i>
-          <h3>מכירה וקנייה של נכסים</h3>
-          <p>איתור דירה או נכס המתאים בדיוק לצרכים שלכם והובלת משא ומתן עד לקבלת המפתח, או מכירת הנכס שלך בצורה היעילה ביותר.</p>
-        </div>
-        <div class="service">
-          <i class="fas fa-building"></i>
-          <h3>שיווק פרויקטים</h3>
-          <p>לידים איכותיים ופרסום ממוקד ליזמים: חשיפה מקסימלית וניהול משפכי מכירות חכמים שמניבים תוצאות.</p>
-        </div>
-        <div class="service">
-          <i class="fas fa-chart-line"></i>
-          <h3>ליווי משקיעים</h3>
-          <p>איתור הזדמנויות להשקעה בתשואה גבוהה, בדיקת כדאיות כלכלית וליווי צמוד לאורך הדרך – בטוח, מדויק ומשתלם.</p>
-        </div>
-        <div class="service">
-          <i class="fas fa-key"></i>
-          <h3>ניהול השכרות</h3>
-          <p>בחירת דיירים איכותיים, מקסום שכר דירה תוך שמירה על האינטרסים שלך ויצירת הכנסה יציבה ללא התעסקות.</p>
-        </div>
+        <article class="service" aria-labelledby="svc-buy-sell">
+          <i class="fas fa-home" aria-hidden="true"></i>
+          <h3 id="svc-buy-sell">מכירה וקנייה של נכסים</h3>
+          <p>איתור דירה או נכס המתאים לצרכים שלכם והובלת מו״מ עד המפתח, או מכירה יעילה של הנכס שלך.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc-projects">
+          <i class="fas fa-building" aria-hidden="true"></i>
+          <h3 id="svc-projects">שיווק פרויקטים</h3>
+          <p>לידים איכותיים ומשפכי מכירה חכמים ליזמים, עם חשיפה ממוקדת ותוצאות.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc-investors">
+          <i class="fas fa-chart-line" aria-hidden="true"></i>
+          <h3 id="svc-investors">ליווי משקיעים</h3>
+          <p>איתור הזדמנויות, בדיקת כדאיות כלכלית וליווי צמוד – מדויק ובטוח.</p>
+        </article>
+
+        <article class="service" aria-labelledby="svc-rentals">
+          <i class="fas fa-key" aria-hidden="true"></i>
+          <h3 id="svc-rentals">ניהול השכרות</h3>
+          <p>סינון דיירים, מקסום שכר דירה ושקט נפשי לבעלי נכסים.</p>
+        </article>
       </div>
     </section>
-    <section class="section" id="gallery">
-      <h2>גלריית תמונות</h2>
-      <div class="gallery">
-        <!-- Images from original page -->
-        <!-- BEGIN IMAGE LIST -->
-        <!-- We'll programmatically insert images later using placeholders -->
-      </div>
+
+    <section class="section container" id="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">גלריית תמונות</h2>
+      <ul class="gallery" role="list" id="galleryList"></ul>
+      <p class="sr-only" id="gallery-desc">תמונות שיווקיות של דירות, לובי, סלונים ומודעות פרסומיות.</p>
     </section>
-    <section class="section about" id="about">
-      <h2>נעים מאוד, אני עידן חולי</h2>
+
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">נעים מאוד, אני עידן חולי</h2>
       <p>
-        אחרי כ‑20 שנה בליווי לקוחות בתהליכי קבלת החלטות פיננסיות וביצוע השקעות נדל"ן פרטיות, הפכתי את התשוקה שלי למקצוע:
-        למצוא לכם בית נכון או השקעה נכונה – עסקה שמשנה חיים ולא עוד דירה.
+        אחרי כ-20 שנה בליווי לקוחות בתהליכי קבלת החלטות פיננסיות וביצוע השקעות נדל״ן פרטיות,
+        הפכתי את התשוקה שלי למקצוע: למצוא לכם בית נכון או השקעה נכונה – עסקה שמשנה חיים.
       </p>
       <p>
-        אני מאמין בשקיפות מלאה, חשיבה יצירתית במצבים מורכבים ונחישות לסגור עסקאות במקום שאחרים מרימים ידיים. כל עסקה עבורי היא צעד
-        משמעותי בחיים של הלקוח, ולכן אני מתייחס אליה כאילו היא שלי.
+        אני מאמין בשקיפות מלאה, חשיבה יצירתית בעסקאות מורכבות ונחישות לסגור – איפה שאחרים מוותרים.
       </p>
       <p>
-        וכשאני לא בשטח? אני בעלה של ויקטוריה ואבא של אליה, אלאור ואלדר – וזה מזכיר לי למה חשוב לי לעשות את עבודתי מכל הלב.
+        וכשאני לא בשטח? אני בעלה של ויקטוריה ואבא של אליה, אלאור ואלדר – וזה מזכיר לי למה אני עושה הכל מכל הלב.
       </p>
     </section>
-    <section class="section">
+
+    <section class="section container" aria-labelledby="cta-title">
       <div class="cta-box" id="contact">
-        <h2>שיחת ייעוץ ללא התחייבות</h2>
-        <p>השאירו פרטים או פנו אלינו ישירות ונחזור אליכם עם פתרון מותאם אישית לצרכים שלכם.</p>
-        <div class="cta-actions">
-          <a href="https://wa.me/972549791171" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> פתיחת ווטסאפ</a>
-          <a href="tel:+972549791171"><i class="fas fa-phone"></i> <span dir="ltr">054‑979‑1171</span></a>
+        <h2 id="cta-title">שיחת ייעוץ ללא התחייבות</h2>
+        <p>פנו אלינו ישירות או השאירו פרטים ונציע פתרון מותאם אישית.</p>
+        <div class="cta-actions" role="group" aria-label="ערוצי יצירת קשר">
+          <a class="btn" href="https://wa.me/972549791171" target="_blank" rel="noopener"
+             aria-label="פתיחת שיחה בוואטסאפ לעידן לנדל״ן">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> פתיחת ווטסאפ
+          </a>
+          <a class="btn" href="tel:+972549791171" aria-label="חיוג לעידן לנדל״ן במספר 054-979-1171">
+            <i class="fas fa-phone" aria-hidden="true"></i> <span dir="ltr">054-979-1171</span>
+          </a>
         </div>
       </div>
     </section>
-    <footer>
-      <p>© 2025 עידן לנדל"ן – כל הזכויות שמורות.</p>
-    </footer>
-    <script>
-      // Dynamically insert image elements into the gallery
-      (function() {
-        const images = [
-          'images/0922a872-c64c-4cc6-9620-c6b2b3a77eed__202525.jpg',
-          'images/2359545_f544ced8-8767-4822-bde7-8386d7bb3b95.png',
-          'images/2370248_84deac51-b54c-4dbb-ae64-3d9f026aa664.png',
-          'images/2385041_913202ff-e6d8-4a55-8b02-c2bc2edefdd5.png',
-          'images/2474296_53066b31-3277-4ec0-bf7f-42a083e10e3f.png',
-          'images/2497219_a9d4586e-64ae-4593-8726-9ec6df541749.png',
-          'images/2501404_c1c71a7f-7d7c-45d4-8a10-7dbcb4f13c39.png',
-          'images/2502316_24d5b7e7-de2c-4151-bf17-1b785ea39d01.png',
-          'images/2504349_766b514c-c7a3-4484-94d2-d4c3247b5f55.png',
-          'images/2507205_a0cff982-cd5a-420f-a660-2323be5b9d67.png',
-          'images/2516982_a6301ff8-3e74-44c6-bfec-18f7d325ee36.png',
-          'images/2526256_2936293c-a496-4677-8fcc-d768aa153447.png',
-          'images/3eb735c1-b0d4-456d-9edf-84244755beea__202042.jpg',
-          'images/77f6e22d-7364-40ec-854b-8c15e5586afe__211863.png'
-        ];
-        const gallery = document.querySelector('.gallery');
-        images.forEach(src => {
-          const img = document.createElement('img');
-          img.src = src;
-          img.alt = 'תמונה של נכס';
-          gallery.appendChild(img);
-        });
-      })();
-    </script>
-  </body>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© 2025 עידן לנדל״ן – כל הזכויות שמורות.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Create accessible gallery items with alt text and lazy loading
+    (function () {
+      const images = [
+        {src:'images/0922a872-c64c-4cc6-9620-c6b2b3a77eed__202525.jpg', alt:'בניין מגורים מודרני, חזית מזווית רחוב'},
+        {src:'images/2359545_f544ced8-8767-4822-bde7-8386d7bb3b95.png', alt:'מודעת שיווק: ראש השנה – “שנה טובה”'},
+        {src:'images/2370248_84deac51-b54c-4dbb-ae64-3d9f026aa664.png', alt:'מודעת מבצע– דבש/כוורת ברוח חג'},
+        {src:'images/2385041_913202ff-e6d8-4a55-8b02-c2bc2edefdd5.png', alt:'קרוסלת דירות – עיצוב זהב כהה'},
+        {src:'images/2474296_53066b31-3277-4ec0-bf7f-42a083e10e3f.png', alt:'מודעת קידום נכסים – תצלומי פנים/סלון'},
+        {src:'images/2497219_a9d4586e-64ae-4593-8726-9ec6df541749.png', alt:'מודעת פרויקט – דירה חדשה'},
+        {src:'images/2501404_c1c71a7f-7d7c-45d4-8a10-7dbcb4f13c39.png', alt:'תמונות פנים – סלון מעוצב'},
+        {src:'images/2502316_24d5b7e7-de2c-4151-bf17-1b785ea39d01.png', alt:'מודעת טיפים למשקיעים'},
+        {src:'images/2504349_766b514c-c7a3-4484-94d2-d4c3247b5f55.png', alt:'מתחם מגורים קו ראשון לים'},
+        {src:'images/2507205_a0cff982-cd5a-420f-a660-2323be5b9d67.png', alt:'מודעת אינפו גרפית – נתוני שוק'},
+        {src:'images/2516982_a6301ff8-3e74-44c6-bfec-18f7d325ee36.png', alt:'סלון מודרני – עיצוב בהיר'},
+        {src:'images/2526256_2936293c-a496-4677-8fcc-d768aa153447.png', alt:'תמונת פנים – דירה מוארת'},
+        {src:'images/3eb735c1-b0d4-456d-9edf-84244755beea__202042.jpg', alt:'טקסטורה/רקע למודעת עיצוב'},
+        {src:'images/77f6e22d-7364-40ec-854b-8c15e5586afe__211863.png', alt:'מודעת פרויקט – הזדמנות משקיעים'}
+      ];
+
+      const list = document.getElementById('galleryList');
+      images.forEach(({src, alt}) => {
+        const li = document.createElement('li');
+        li.style.listStyle = 'none';
+        const fig = document.createElement('figure');
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.width = 600;    // helps CLS
+        img.height = 400;   // keeps aspect ratio container
+        fig.appendChild(img);
+        li.appendChild(fig);
+        list.appendChild(li);
+      });
+    })();
+  </script>
+</body>
 </html>
